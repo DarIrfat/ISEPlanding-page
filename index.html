@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ISEP – Management Training</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Alphah Group Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>ISEP Management Training</h1>
+  <p>Institute of Sustainability & Environmental Professionals</p>
+  <a href="#contact" class="btn primary">Request Quotation</a>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2 class="section-title">About ISEP</h2>
+  <p class="section-subtitle">
+    ISEP provides professional management training focused on leadership,
+    project management, and effective team communication for aspiring and
+    current managers.
+  </p>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <h2 class="section-title">ISEP Management Training Programs</h2>
+  <p class="section-subtitle">
+    Choose the training program that best fits your professional needs
+  </p>
+
+  <div class="courses-wrapper">
+
+    <!-- COURSE 1 -->
+    <div class="course-card">
+      <span class="badge">Popular</span>
+      <h3>ISEP Management Training</h3>
+      <p class="duration">Duration: 1 Day</p>
+
+      <ul>
+        <li>Online & Classroom Training</li>
+        <li>100% Success Rate</li>
+        <li>Lifetime Certification</li>
+        <li>Languages: English, Hindi, Arabic & Urdu</li>
+      </ul>
+
+      <a href="#contact" class="btn primary full">Request Quotation</a>
+    </div>
+
+    <!-- COURSE 2 -->
+    <div class="course-card">
+      <h3>ISEP Management Training</h3>
+      <p class="duration">Duration: 2 Days</p>
+
+      <ul>
+        <li>In-depth Management & Leadership Training</li>
+        <li>Online & Classroom Mode</li>
+        <li>Lifetime Certification</li>
+        <li>Practical & Industry-Oriented Learning</li>
+      </ul>
+
+      <a href="#contact" class="btn primary full">Request Quotation</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Request a Quotation</h2>
+  <p class="section-subtitle">
+    Fill in the details below and our team will contact you via WhatsApp
+  </p>
+
+  <div class="form-wrapper">
+    <form onsubmit="sendWhatsApp(); return false;">
+
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="form-group">
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option>ISEP Management Training – 1 Day</option>
+          <option>ISEP Management Training – 2 Days</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder="Your Message (Optional)"></textarea>
+      </div>
+
+      <button type="submit" class="btn primary full">
+        Send Enquiry via WhatsApp
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Alphah Group | ISEP</p>
+</footer>
+
+<!-- WHATSAPP SCRIPT -->
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let course = document.getElementById("course").value;
+  let message = document.getElementById("message").value;
+
+  let phoneNumber = "918082388113";
+
+  let url = "https://wa.me/" + phoneNumber +
+    "?text=" + encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Course: " + course + "\n" +
+      "Message: " + message
+    );
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
